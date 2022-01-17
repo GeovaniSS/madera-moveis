@@ -1,0 +1,262 @@
+@charset "UTF-8"; 
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@400;500;700&display=swap');
+
+/*------------------------------*/
+/*         VARIÁVEIS CSS        */
+/*------------------------------*/
+:root {
+    /*--------- CORES ---------- */
+    --bg-color-primary: #E4C3AD;
+    --bg-color-secundary: #E9CCB9;
+    --bg-color-terciary: #FFF6F6;
+    --title-color-light: #fff; 
+    --title-color-dark: #C6A385; 
+    --text-color-light: #fff;
+    --text-color-dark: #685548; 
+    --menu-color: #fff;
+
+    /*--------- FONTE ---------- */
+    --font-primary: 'Poppins', sans-serif; 
+    --font-secondary: 'Roboto', sans-serif; 
+}
+
+/*------------------------------*/
+/*     CONFIGURAÇÕES GERAIS     */
+/*------------------------------*/
+* {
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--bg-color-primary);
+}
+
+h1 {
+    color: var(--text-color-light);
+    font-weight: bold;
+    font-size: 48px;
+}
+
+h2 {
+    font-family: 'Roboto';
+    color: var(--text-color-light);
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 50px;
+}
+
+h4 {
+    color: var(--text-color-light);
+    font-weight: 500;
+    font-size: 24px;
+}
+
+p {
+    font-size: 24px;
+    color: var(--text-color-dark);
+    margin-bottom: 30px;
+    line-height: 40px;
+    text-align: justify;
+}
+
+span {
+    font-size: 24px;
+}
+
+/*------------------------------*/
+/*       MENU DE NAVEGAÇÃO      */
+/*------------------------------*/
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px;
+}
+
+nav a {
+    color: var(--menu-color);
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: normal;
+    margin-right: 20px;
+}
+
+/*------------------------------*/
+/*       SEÇÃO PRINCIPAL        */
+/*------------------------------*/
+header {
+    display: flex;
+    justify-content: space-between;
+    height: 600px;
+}
+
+header .header-container {
+    width: 30%;
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 50px;
+}
+
+header .header-logo {
+    display: flex;
+}
+
+header .header-logo .logo {
+    width: 15%;
+    margin-left: 15px;
+}
+
+.image {
+    width: 45%;
+    position: absolute;
+    top: 10%;
+    right: 10%;
+}
+
+/*------------------------------*/
+/*         SEÇÃO SOBRE          */
+/*------------------------------*/
+section#sobre {
+    background-color: var(--bg-color-terciary);
+    padding: 70px 50px;
+}
+
+section#sobre h1 {
+    color: var(--title-color-dark);
+    margin: 30px 0;
+}
+
+/*------------------------------*/
+/*        SEÇÃO PRODUTOS        */
+/*------------------------------*/
+section#produtos {
+    background-color: var(--bg-color-secundary);
+    padding: 70px 50px;
+}
+
+section#produtos h2 {
+    font-size: 46px;
+    margin: 30px 0; 
+}
+
+section#produtos p {
+    color: #fff;
+}
+
+section#produtos .card-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+section#produtos .card-container .card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.308);
+}
+
+section#produtos .card-container .card-image {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 500px;
+    border-radius: 10px 10px 0 0;
+}
+
+section#produtos .card-container .card-content {
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+    height: 70px; 
+}
+
+/*------------------------------*/
+/*        SEÇÃO ENCOMENDAS      */
+/*------------------------------*/
+section#encomendas {
+    background-color: var(--bg-color-terciary);
+    padding: 70px 50px;
+}
+
+section#encomendas h2 {
+    color: var(--title-color-dark);
+}
+
+/*------------------------------*/
+/*          FORMULÁRIO          */
+/*------------------------------*/
+
+form {
+    width: 400px;
+    margin: auto;
+}
+
+form label {
+    color: var(--text-color-dark);
+    font-size: 16px;
+}
+
+form input, select, textarea {
+    width: 100%;
+    height: 30px;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+form fieldset {
+    padding: 10px;
+}
+
+form fieldset legend {
+    color: var(--text-color-dark);
+}
+
+form fieldset input[type="radio"] {
+    width: 15px; 
+    margin-left: 30px;
+}
+
+form fieldset label {
+    text-align: center;
+}
+
+formt textarea {
+    line-height: 30px; 
+}
+
+form .form-button {
+    display: flex;
+}
+
+form input[type="submit"] {
+    margin: 10px;
+}
+
+form input[type="reset"] {
+    margin: 10px;
+}
+
+
+
+/*------------------------------*/
+/*           RODAPÉ             */
+/*------------------------------*/
+footer p {
+    text-align: center;
+    line-height: 40px;
+    margin: 0;
+    padding: 10px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #1d1714
+}

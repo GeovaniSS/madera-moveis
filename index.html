@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Geovani">
+    <meta name="keywords" content="Móveis, Madera, Madeira, Móveis de Madeira, Madera Móveis, Decoração para casa, Móveis para casa"> 
+    <meta name="description" content="One page para venda e encomenda dos móveis da empresa Madera">
+    <title>Madera Móveis</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#produtos">Produtos</a>
+        <a href="#encomendas">Encomendas</a>
+    </nav>
+ 
+
+    <header>
+        <div class="header-container">
+            <div class="header-logo">
+                <h1>Madera</h1>
+                <img src="img/logo.png" alt="" class="logo">
+            </div>
+            <h2>Escolha os <br> Melhores Móveis <br> para sua Casa</h2>
+            <h4>Nós temos mais de 7 mil produtos em estoque e nossos clientes confiam na nossa marca</h3>
+        </div>
+    </header>
+
+    
+    <img src="img/movel-principal.png" alt="Foto com a logo da empresa Madera, um título dizendo 'Escolha os melhores móveis para sua casa' e uma cômoda alinhada a direita do banner" class="image">
+
+    
+    <section id="sobre">
+        <h1>Madera Móveis</h1>
+        <p >A Madera é uma das maiores e mais modernas indústrias do setor moveleiro do Brasil e atua como referência em qualidade de produção, com seus móveis de madeira que deixam sua casa com outra cara. Na Madera, você encontra os melhores móveis para a sua sala de estar,  diversas opções para o seu quarto, o que você precisa para seu escritório e muito mais. Tudo pensado para proporcionar mais conforto e beleza para a sua casa, atendendo o seu gosto, espaço e necessidade.</p>
+        <p >Nossos princípios são alinhados com os dos clientes, o que define a Madera é a paixão e dedicação com que produzimos nossos móveis. Nossa missão é levar aquela sensação boa de se sentir em casa, gostando do lugar em que vivemos. Para isso, produzimos e vendemos móveis com bom design, qualidadade e com uma funcionalidade que proporciona uma experiência completa.</p>
+    </section>
+    
+    <section id="produtos">
+        <h2>Produtos</h2>
+
+        <p>Produtos populares e lançamentos da Madera Móveis</p>
+
+        <div class="card-container">
+            <div class="card">
+                <div class="card-image">
+                    <img src="img/Movel-1.png" alt="Cômoda">
+                </div>
+                <div class="card-content">
+                    <span><strong>Cômoda</strong></span>
+                    <span>R$389,90</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                    <img src="img/Movel-2.png" alt="Mesinha">
+                </div>
+                <div class="card-content">
+                    <span><strong>Mesinha</strong></span>
+                    <span>R$359,99</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                    <img src="img/Movel-3.png" alt="Penteadeira">
+                </div>
+                <div class="card-content">
+                    <span><strong>Penteadeira</strong></span>
+                    <span>R$199,99</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                    <img src="img/Movel-4.png" alt="Mesa de Livros">
+                </div>
+                <div class="card-content">
+                    <span><strong>Mesa</strong></span>
+                    <span>R$219,90</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="encomendas">
+        <h2>Encomendas</h2>
+        <p>Faça a encomenda do seu móvel favorito! Não deixe para depois</p>
+    
+        <form action="">
+            <label for="nome">Nome:</label>
+            <input id="nome" type="text" name="nome" size="80" placeholder="Nome completo" required>
+
+            <label for="email">Email:</label>
+            <input id="email" type="email" name="email" size="80" placeholder="nome@gmail.com" required>
+    
+            <label for="produto">Produto:</label>
+            <select name="produto" id="produto" required>
+                <option value="">Selecione</option>
+                <option value="comoda">Cômoda</option>
+                <option value="mesinha">Mesinha</option>
+                <option value="pente">Penteadeira</option>
+                <option value="mesa_livro">Mesa de Livros</option>
+            </select>
+    
+            <label for="quant">Quantidade:</label>
+            <input id="quant" type="number" name="quant" min="1" max="1000000000" placeholder="somente números" required>
+
+            <fieldset>
+                <legend>Forma Retirada:</legend>
+                <div>
+                    <input type="radio" name="forma" value="delivery" id="delivery" required> 
+                    <label for="delivery">Delivery</label>
+                </div>
+                <div>
+                    <input type="radio" name="forma" value="local" id="local" required> 
+                    <label for="local">Retirar no Local</label>
+                </div>
+            </fieldset>
+
+            <label for="msg">Comentários:</label>
+            <textarea name="msg" id="msg"></textarea>
+        
+            <div class="form-button">
+                <input type="submit" name="btn-encomendar" value="ENCOMENDAR">
+                <input type="reset" name="btn-cancelar" value="CANCELAR">
+            </div>
+        </form>
+    </section>
+
+    <footer>
+        <p>Desenvolvido por <a href="https://www.instagram.com/geovanissilva_/?hl=pt-br" target="_blank" rel="external"><strong>Geovani</strong></a> - 2021</p>
+    </footer>
+</body>
+</html>
