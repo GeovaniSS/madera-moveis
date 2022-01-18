@@ -24,6 +24,7 @@
 /*------------------------------*/
 /*     CONFIGURAÇÕES GERAIS     */
 /*------------------------------*/
+
 * {
     padding: 0;
     margin: 0;
@@ -46,33 +47,40 @@ h2 {
     font-family: 'Roboto';
     color: var(--text-color-light);
     font-weight: 600;
-    font-size: 36px;
+    font-size: 40px;
     line-height: 50px;
 }
 
 h4 {
     color: var(--text-color-light);
-    font-weight: 500;
+    font-weight: normal;
     font-size: 24px;
 }
 
 p {
     font-size: 24px;
     color: var(--text-color-dark);
-    margin-bottom: 30px;
-    line-height: 40px;
-    text-align: justify;
 }
 
 span {
     font-size: 24px;
+    color: #362d28;
+}
+
+a {
+    font-size: 20px;
+    font-weight: normal; 
+    color: var(--menu-color);
+    text-decoration: none;
 }
 
 /*------------------------------*/
 /*       MENU DE NAVEGAÇÃO      */
 /*------------------------------*/
+
 nav {
     width: 100%;
+    height: 80px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -80,40 +88,66 @@ nav {
 }
 
 nav a {
-    color: var(--menu-color);
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: normal;
-    margin-right: 20px;
+    margin-right: 40px;
+    transition: 0.5s;
+}
+
+nav a:hover {
+    background-color: #685548;
+    border-radius: 10px;
+    padding: 2px 10px;
 }
 
 /*------------------------------*/
 /*       SEÇÃO PRINCIPAL        */
 /*------------------------------*/
+
 header {
     display: flex;
     justify-content: space-between;
     height: 600px;
 }
 
-header .header-container {
+header .header-content {
     width: 30%;
     display: flex; 
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     margin-left: 50px;
 }
 
 header .header-logo {
     display: flex;
+    margin: 20px 0 30px 0;
 }
 
-header .header-logo .logo {
+header .logo {
     width: 15%;
     margin-left: 15px;
 }
 
-.image {
+header .header-content h2 {
+    margin: 60px 0 40px 0; 
+}
+
+header .header-content h4  {
+    margin-bottom: 25px;
+}
+
+header .header-content a {
+    text-align: center;
+    width: 25%;
+    border-radius: 10px;
+    padding: 2px 10px;
+    background-color: #C6A385;
+    transition: 0.5s;
+}
+
+header .header-content a:hover {
+    background-color: var(--text-color-dark);
+}
+
+header .home-banner {
     width: 45%;
     position: absolute;
     top: 10%;
@@ -123,6 +157,7 @@ header .header-logo .logo {
 /*------------------------------*/
 /*         SEÇÃO SOBRE          */
 /*------------------------------*/
+
 section#sobre {
     background-color: var(--bg-color-terciary);
     padding: 70px 50px;
@@ -133,36 +168,51 @@ section#sobre h1 {
     margin: 30px 0;
 }
 
+section#sobre p {
+    margin-bottom: 30px;
+    line-height: 40px;
+    text-align: justify;
+}
+
 /*------------------------------*/
 /*        SEÇÃO PRODUTOS        */
 /*------------------------------*/
+
 section#produtos {
     background-color: var(--bg-color-secundary);
-    padding: 70px 50px;
+    padding: 70px 50px 110px 50px;
 }
 
 section#produtos h2 {
     font-size: 46px;
+    color: var(--text-color-dark);
     margin: 30px 0; 
 }
 
 section#produtos p {
-    color: #fff;
+    margin: 30px 0;
+    font-weight: 300;
 }
 
-section#produtos .card-container {
+#card-container {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
 }
 
-section#produtos .card-container .card {
+#card-container .card {
     background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.308);
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.308);
+    transition: 0.5s;
 }
 
-section#produtos .card-container .card-image {
+#card-container .card:hover {
+    background-color: #EDEDED;
+    box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.329);
+}
+
+#card-container .card-image {
     display: flex; 
     align-items: center;
     justify-content: center;
@@ -171,7 +221,7 @@ section#produtos .card-container .card-image {
     border-radius: 10px 10px 0 0;
 }
 
-section#produtos .card-container .card-content {
+#card-container .card-content {
     display: flex;
     justify-content: space-around; 
     align-items: center;
@@ -181,13 +231,20 @@ section#produtos .card-container .card-content {
 /*------------------------------*/
 /*        SEÇÃO ENCOMENDAS      */
 /*------------------------------*/
+
 section#encomendas {
     background-color: var(--bg-color-terciary);
     padding: 70px 50px;
 }
 
 section#encomendas h2 {
+    font-size: 46px;
     color: var(--title-color-dark);
+    margin: 30px 0;
+}
+
+section#encomendas p {
+    margin-bottom: 20px;
 }
 
 /*------------------------------*/
@@ -195,60 +252,82 @@ section#encomendas h2 {
 /*------------------------------*/
 
 form {
-    width: 400px;
+    width: 500px;
     margin: auto;
 }
 
 form label {
-    color: var(--text-color-dark);
+    color: #362d28;
     font-size: 16px;
 }
 
 form input, select, textarea {
     width: 100%;
-    height: 30px;
-    padding: 10px;
+    height: 40px;
+    padding-left: 10px;
     margin-bottom: 15px;
+    color: #000000;
+    font-family: 'Roboto';
+    font-size: 16px;
+    border: 1px solid #1d1714
+}
+
+form select {
+    padding-left: 8px;
 }
 
 form fieldset {
     padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #1d1714;
+    background-color: #fff;
 }
 
 form fieldset legend {
-    color: var(--text-color-dark);
+    color: #362d28;
+}
+
+form fieldset #delivery #local {
+    display: flex;
+    flex-direction: column;
 }
 
 form fieldset input[type="radio"] {
-    width: 15px; 
+    width: 15px;
+    height: 15px; 
     margin-left: 30px;
 }
 
-form fieldset label {
-    text-align: center;
+form textarea {
+    height: 80px; 
 }
 
-formt textarea {
-    line-height: 30px; 
-}
+/*------------------------------*/
+/*     FORMULÁRIO - BOTÕES      */
+/*------------------------------*/
 
 form .form-button {
     display: flex;
 }
 
-form input[type="submit"] {
-    margin: 10px;
+form input[type="submit"], form input[type="reset"] {
+    padding: 0;
+    margin: 20px;
+    border-radius: 8px;
+    background-color: #E9CCB9;
+    color: #fff;
+    border: 0;
+    transition: 0.5s;
 }
 
-form input[type="reset"] {
-    margin: 10px;
+form input[type="submit"]:hover, form input[type="reset"]:hover {
+    background-color: #362d28;
 }
-
-
 
 /*------------------------------*/
 /*           RODAPÉ             */
 /*------------------------------*/
+
 footer p {
     text-align: center;
     line-height: 40px;
@@ -256,7 +335,16 @@ footer p {
     padding: 10px;
 }
 
+footer p strong {
+    font-size: 24px;
+}
+
 footer a {
     text-decoration: none;
-    color: #1d1714
+    color: var(--text-color-dark);
+    transition: 0.5s;
+}
+
+footer a:hover {
+    color: #1d1714;
 }
