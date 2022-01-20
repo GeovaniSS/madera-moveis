@@ -146,7 +146,7 @@ header .header-content a:hover {
 
 header .home-banner {
     width: 45%;
-    position: absolute;
+    position: absolute; /*A imagem do banner ficara absoluta em relação ao header */
     top: 50%;
     left: 68%;
     transform: translate(-50%, -50%);
@@ -192,7 +192,7 @@ section#produtos p {
 
 #card-container {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /*Opção colocada para quebrar os cards em telas menores */
     justify-content: space-between;
     align-items: center;
 }
