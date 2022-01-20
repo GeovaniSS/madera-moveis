@@ -2,28 +2,25 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@400;500;700&display=swap');
 
-/*------------------------------*/
-/*         VARIÁVEIS CSS        */
-/*------------------------------*/
+/*================ VARIÁVEIS CSS ================*/
 :root {
     /*--------- CORES ---------- */
-    --bg-color-primary: #E4C3AD;
-    --bg-color-secundary: #E9CCB9;
-    --bg-color-terciary: #FFF6F6;
-    --title-color-light: #fff; 
-    --title-color-dark: #C6A385; 
-    --text-color-light: #fff;
-    --text-color-dark: #685548; 
+    --bg-primary-color: #E4C3AD;
+    --bg-secundary-color: #E9CCB9;
+    --bg-terciary-color: #FFF6F6;
+    --title-light-color: #fff; 
+    --title-dark-color: #C6A385; ;
+    --text-light-color: #fff;
+    --text-dark-color: #685548; 
+    --card-legend-color: #362d28;
     --menu-color: #fff;
 
     /*--------- FONTE ---------- */
-    --font-primary: 'Poppins', sans-serif; 
-    --font-secondary: 'Roboto', sans-serif; 
+    --primary-font: 'Poppins', sans-serif; 
+    --secundary-font: 'Roboto', sans-serif; 
 }
 
-/*------------------------------*/
-/*     CONFIGURAÇÕES GERAIS     */
-/*------------------------------*/
+/*=========== CONFIGURAÇÕES GERAIS ===========*/
 
 * {
     padding: 0;
@@ -33,182 +30,183 @@
 }
 
 body {
-    font-family: var(--font-primary);
-    background-color: var(--bg-color-primary);
+    font-family: var(--primary-font);
+    background-color: var(--bg-primary-color);
 }
 
 h1 {
-    color: var(--text-color-light);
+    color: var(--title-light-color);
     font-weight: bold;
-    font-size: 48px;
+    font-size: 3rem;
 }
 
 h2 {
-    font-family: 'Roboto';
-    color: var(--text-color-light);
-    font-weight: 600;
-    font-size: 40px;
-    line-height: 50px;
+    font: 600 2.5rem 'Roboto', sans-serif;
+    color: var(--title-light-color);
+    line-height: 3rem;
 }
 
 h4 {
-    color: var(--text-color-light);
+    color: var(--title-light-color);
     font-weight: normal;
-    font-size: 24px;
+    font-size: 1.5rem;
 }
 
 p {
-    font-size: 24px;
-    color: var(--text-color-dark);
+    font-size: 1.5rem;
+    color: var(--text-dark-color);
 }
 
 span {
-    font-size: 24px;
-    color: #362d28;
+    font-size: 1.5rem;
+    color: var(--card-legend-color);
 }
 
 a {
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: normal; 
     color: var(--menu-color);
     text-decoration: none;
 }
 
-/*------------------------------*/
-/*       MENU DE NAVEGAÇÃO      */
-/*------------------------------*/
+/*=========== MENU DE NAVEGAÇÃO ===========*/
 
 nav {
     width: 100%;
-    height: 80px;
+    height: 5rem;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding: 20px;
+    padding: 1rem;
+    margin-bottom: 1rem;
 }
 
 nav a {
-    margin-right: 40px;
+    margin-right: 2.5rem;
     transition: 0.5s;
 }
 
 nav a:hover {
-    background-color: #685548;
-    border-radius: 10px;
-    padding: 2px 10px;
+    background-color: var(--title-dark-color);
+    border-radius: 12px;
+    padding: 2px 12px;
 }
 
-/*------------------------------*/
-/*       SEÇÃO PRINCIPAL        */
-/*------------------------------*/
+nav a:active {
+    background-color: var(--text-dark-color);
+}
+
+/*=========== HOME PAGE ===========*/
 
 header {
     display: flex;
     justify-content: space-between;
-    height: 600px;
+    position: relative; 
+    height: 37.5rem;
 }
 
 header .header-content {
-    width: 30%;
-    display: flex; 
+    width: 40%;
+    display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    margin-left: 50px;
+    margin-left: 3rem;
 }
 
 header .header-logo {
     display: flex;
-    margin: 20px 0 30px 0;
+    margin: 0 0 1.9rem 0; 
 }
 
 header .logo {
-    width: 15%;
-    margin-left: 15px;
+    max-width: 6rem; 
+    margin-left: 0.9rem;
 }
 
 header .header-content h2 {
-    margin: 60px 0 40px 0; 
+    margin: 3.5rem 0;
 }
 
 header .header-content h4  {
-    margin-bottom: 25px;
+    margin-bottom: 1.5rem;
 }
 
 header .header-content a {
     text-align: center;
-    width: 25%;
-    border-radius: 10px;
-    padding: 2px 10px;
-    background-color: #C6A385;
+    width: 10rem;
+    border-radius: 12px;
+    padding: 2px 12px;
+    background-color: var(--title-dark-color);
     transition: 0.5s;
 }
 
 header .header-content a:hover {
-    background-color: var(--text-color-dark);
+    background-color: var(--text-dark-color);
 }
 
 header .home-banner {
     width: 45%;
     position: absolute;
-    top: 10%;
-    right: 10%;
+    top: 50%;
+    left: 68%;
+    transform: translate(-50%, -50%);
 }
 
-/*------------------------------*/
-/*         SEÇÃO SOBRE          */
-/*------------------------------*/
+/*=========== SEÇÃO SOBRE ===========*/
 
 section#sobre {
-    background-color: var(--bg-color-terciary);
-    padding: 70px 50px;
+    background-color: var(--bg-terciary-color);
+    padding: 4rem 3rem;
 }
 
 section#sobre h1 {
-    color: var(--title-color-dark);
-    margin: 30px 0;
+    color: var(--title-dark-color);
+    margin: 1.9rem 0;
 }
 
 section#sobre p {
-    margin-bottom: 30px;
-    line-height: 40px;
+    margin-bottom: 1.9rem;
+    line-height: 2.5rem;
     text-align: justify;
 }
 
-/*------------------------------*/
-/*        SEÇÃO PRODUTOS        */
-/*------------------------------*/
+/*=========== SEÇÃO PRODUTOS ===========*/
 
 section#produtos {
-    background-color: var(--bg-color-secundary);
-    padding: 70px 50px 110px 50px;
+    background-color: var(--bg-secundary-color);
+    padding: 4rem 3rem 6rem 3rem;
 }
 
 section#produtos h2 {
-    font-size: 46px;
-    color: var(--text-color-dark);
-    margin: 30px 0; 
+    font-size: 2.8rem;
+    color: var(--text-dark-color);
+    margin: 1.8rem 0; 
 }
 
 section#produtos p {
-    margin: 30px 0;
+    margin: 1.8rem 0;
     font-weight: 300;
 }
 
+/*======== CARDS DOS PRODUTOS ======*/
+
 #card-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 }
 
 #card-container .card {
     background-color: #fff;
-    border-radius: 15px;
+    border-radius: 12px;
+    margin: 1rem 0; 
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.308);
     transition: 0.5s;
 }
 
 #card-container .card:hover {
-    background-color: #EDEDED;
+    background-color: #ededede0;
     box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.329);
 }
 
@@ -216,8 +214,8 @@ section#produtos p {
     display: flex; 
     align-items: center;
     justify-content: center;
-    width: 400px;
-    height: 500px;
+    width: 25rem;
+    height: 31rem;
     border-radius: 10px 10px 0 0;
 }
 
@@ -225,51 +223,47 @@ section#produtos p {
     display: flex;
     justify-content: space-around; 
     align-items: center;
-    height: 70px; 
+    height: 4.4rem; 
 }
 
-/*------------------------------*/
-/*        SEÇÃO ENCOMENDAS      */
-/*------------------------------*/
+/*=========== SEÇÃO ENCOMENDAS ===========*/
 
 section#encomendas {
-    background-color: var(--bg-color-terciary);
-    padding: 70px 50px;
+    background-color: var(--bg-terciary-color);
+    padding: 4rem 3rem;
 }
 
 section#encomendas h2 {
-    font-size: 46px;
-    color: var(--title-color-dark);
-    margin: 30px 0;
+    font-size: 2.9rem;
+    color: var(--title-dark-color);
+    margin: 1.9rem 0;
 }
 
 section#encomendas p {
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
 }
 
-/*------------------------------*/
-/*          FORMULÁRIO          */
-/*------------------------------*/
+/*=========== ENCOMENDAS - FORMULÁRIO ===========*/
 
 form {
-    width: 500px;
+    width: 30rem;
     margin: auto;
 }
 
 form label {
-    color: #362d28;
-    font-size: 16px;
+    color: var(--card-legend-color);
+    font-size: 1rem;
 }
 
 form input, select, textarea {
     width: 100%;
-    height: 40px;
+    height: 2.5rem;
     padding-left: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 1rem;
     color: #000000;
     font-family: 'Roboto';
-    font-size: 16px;
-    border: 1px solid #1d1714
+    font-size: 1rem;
+    border: 1px solid #1d1714;
 }
 
 form select {
@@ -278,13 +272,13 @@ form select {
 
 form fieldset {
     padding: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 1rem;
     border: 1px solid #1d1714;
     background-color: #fff;
 }
 
 form fieldset legend {
-    color: #362d28;
+    color: var(--card-legend-color);
 }
 
 form fieldset #delivery #local {
@@ -293,18 +287,20 @@ form fieldset #delivery #local {
 }
 
 form fieldset input[type="radio"] {
-    width: 15px;
-    height: 15px; 
-    margin-left: 30px;
+    width: 1rem;
+    height: 1rem; 
+    margin-left: 1.9rem;
+}
+
+form fieldset label {
+    color: #000;
 }
 
 form textarea {
-    height: 80px; 
+    height: 5rem; 
 }
 
-/*------------------------------*/
-/*     FORMULÁRIO - BOTÕES      */
-/*------------------------------*/
+/*=========== FORMULÁRIO - BOTÕES ===========*/
 
 form .form-button {
     display: flex;
@@ -312,36 +308,35 @@ form .form-button {
 
 form input[type="submit"], form input[type="reset"] {
     padding: 0;
-    margin: 20px;
+    margin: 1.25rem;
     border-radius: 8px;
-    background-color: #E9CCB9;
+    font-size: 1.1rem;
+    background-color: var(--title-dark-color);
     color: #fff;
     border: 0;
     transition: 0.5s;
 }
 
 form input[type="submit"]:hover, form input[type="reset"]:hover {
-    background-color: #362d28;
+    background-color: var(--text-dark-color);
 }
 
-/*------------------------------*/
-/*           RODAPÉ             */
-/*------------------------------*/
+/*=========== RODAPÉ ===========*/
 
 footer p {
     text-align: center;
-    line-height: 40px;
+    line-height: 2.5rem;
     margin: 0;
     padding: 10px;
 }
 
 footer p strong {
-    font-size: 24px;
+    font-size: 1.5rem;
 }
 
 footer a {
     text-decoration: none;
-    color: var(--text-color-dark);
+    color: var(--text-dark-color);
     transition: 0.5s;
 }
 
